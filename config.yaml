@@ -1,0 +1,33 @@
+exchange:
+  name: binance
+  rate_limit: true
+
+symbols:
+  - BTC/USDT
+  - ETH/USDT
+
+timeframes:
+  entry: 15m
+  trend: 1h
+
+loop:
+  sleep_seconds: 60
+  candles_limit: 250
+
+risk:
+  equity_start: 1000
+  risk_per_trade_pct: 0.75
+  max_trades_per_day: 4
+  max_daily_loss_pct: 2
+  max_weekly_loss_pct: 5
+  pause_after_losses: 3
+  max_holding_hours: 168
+
+strategy:
+  min_confidence: 68
+  min_rr: 1.5
+  atr_stop_multiplier: 1.4
+  tp_rr: 1.8
+
+telegram:
+  enabled: false
